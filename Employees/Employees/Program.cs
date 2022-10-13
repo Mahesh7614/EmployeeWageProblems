@@ -29,6 +29,6 @@
         totalempwage = empWage * NUM_OF_WORKING_DAYS;
         Console.WriteLine("Emp Wage : " + empWage);
         Console.WriteLine("Total Emp Wage : " + totalempwage);
+        }
     }
-}
 }
