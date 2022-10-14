@@ -25,7 +25,7 @@
                         empHrs = 0;
                         break;
                 }
-                totalEmpHrs += empHrs;
+                totalEmpHrs +=empHrs;
                 Console.WriteLine("Days : " + totalworkingDays + " Emp Hours : " + empHrs);
             }
             totalempwage = totalEmpHrs * EMP_RATE_PER_HOUR;
