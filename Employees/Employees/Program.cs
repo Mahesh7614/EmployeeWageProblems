@@ -27,7 +27,7 @@
                         break;
                 }
                 totalWorkingDays++;
-                totalEmpHrs = empHrs * NUM_OF_WORKING_DAYS;
+                totalEmpHrs += empHrs;
                 Console.WriteLine("Days : " + totalWorkingDays + "Emp Hrs : " + empHrs);
             }
             
