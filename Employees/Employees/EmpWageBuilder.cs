@@ -11,9 +11,6 @@ namespace Employees
     {
         public const int IS_FULL_TIME = 1, IS_PART_TIME = 2;
 
-        //private int numOfCompany = 0;
-        // private CompanyEmpWage[] companyEmpWageArray;
-        //private List<CompanyEmpWage> companyEmpWageArrayList;
         private LinkedList<CompanyEmpWage> companyEmpWageList;
         private Dictionary<string, CompanyEmpWage> empWageDictionary;
 
