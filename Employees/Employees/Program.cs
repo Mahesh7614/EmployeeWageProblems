@@ -6,6 +6,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         public const int IS_FULL_TIME = 1;
         public const int IS_PART_TIME = 2;
         public const int EMP_RATE_PER_HOUR = 20;
@@ -155,6 +156,22 @@
             computeEmpWage("Wipro",25,25,120);
             computeEmpWage("Cipla",23,28,111);
 >>>>>>> UC8
+=======
+        static void Main(string[] args)
+        {
+            EmpWageBuilderObject Airtel = new EmpWageBuilderObject("Airtel",30,30,100);
+            EmpWageBuilderObject TCS = new EmpWageBuilderObject("TCS",40,30,80);
+            EmpWageBuilderObject Wipro = new EmpWageBuilderObject("Wipro",25,25,120);
+            EmpWageBuilderObject Cipla = new EmpWageBuilderObject("Cipla",23,28,111);
+            Airtel.computeEmpWage();
+            Console.WriteLine(Airtel.toString());
+            TCS.computeEmpWage();
+            Console.WriteLine(TCS.toString());
+            Wipro.computeEmpWage();
+            Console.WriteLine(Wipro.toString());
+            Cipla.computeEmpWage();
+            Console.WriteLine(Cipla.toString());
+>>>>>>> UC9
         }
     }
 }
