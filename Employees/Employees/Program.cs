@@ -5,6 +5,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         public const int IS_FULL_TIME = 1;
         public const int IS_PART_TIME = 2;
         public const int EMP_RATE_PER_HOUR = 20;
@@ -72,13 +73,18 @@
 
         public static int computeEmpWage()
 >>>>>>> UC7
+=======
+        public const int IS_FULL_TIME = 1, IS_PART_TIME = 2;
+
+        public static int computeEmpWage(string company, int empRatePerHour, int numOfWorkingDays, int maxHoursPerMonth)
+>>>>>>> UC8
         {
             // Variables
             int empHrs = 0, totalEmpHrs = 0, totalWorkingDays = 0;
-
-            while (totalEmpHrs <=MAX_HOURS_IN_MONTH && totalWorkingDays < NUM_OF_WORKING_DAYS)
+            // Comutation
+            while (totalEmpHrs <= maxHoursPerMonth && totalWorkingDays < numOfWorkingDays)
             {
-                
+                totalWorkingDays++;
                 Random random = new Random();
                 int empCheck = random.Next(0, 3);
                 switch (empCheck)
@@ -93,7 +99,6 @@
                         empHrs = 0;
                         break;
                 }
-                totalWorkingDays++;
                 totalEmpHrs += empHrs;
                 Console.WriteLine("Days : " + totalWorkingDays + "Emp Hrs : " + empHrs);
             }
@@ -135,14 +140,21 @@
 >>>>>>> UC6
 =======
             
-            int totalempwage = totalEmpHrs * EMP_RATE_PER_HOUR;
-            Console.WriteLine("Total Emp Wage : " + totalempwage);
+            int totalempwage = totalEmpHrs * empRatePerHour;
+            Console.WriteLine("Total Emp Wage of " + company + " is :" + totalempwage);
             return totalempwage;
         }
         static void Main(string[] args)
         {
+<<<<<<< HEAD
             computeEmpWage();
 >>>>>>> UC7
+=======
+            computeEmpWage("Airtel",30,30,100);
+            computeEmpWage("TCS",40,30,80);
+            computeEmpWage("Wipro",25,25,120);
+            computeEmpWage("Cipla",23,28,111);
+>>>>>>> UC8
         }
     }
 }
