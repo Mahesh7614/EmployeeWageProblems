@@ -1,14 +1,26 @@
-﻿namespace Employees
+﻿using System;
+using System.Runtime.CompilerServices;
+
+namespace Employees
 {
     class Program
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("Enter Company Name : ");
+            string CompName = Console.ReadLine();
+
+            Console.WriteLine("Enter Employee Rate Per Hour : ");
+            int rate = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("Enter No of Working Days : ");
+            int numOfDays = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("Enter Maximum Hours Per Month : ");
+            int maxHourMonth = Convert.ToInt32(Console.ReadLine());
+            
             EmpWageBuilderArray empWageBuilder = new EmpWageBuilderArray();
-            empWageBuilder.addcompanyEmpWage("Airtel", 30, 30, 100);
-            empWageBuilder.addcompanyEmpWage("TCS", 40, 30, 80);
-            empWageBuilder.addcompanyEmpWage("Wipro", 25, 25, 120);
-            empWageBuilder.addcompanyEmpWage("Cipla", 23, 28, 111);
+            empWageBuilder.addcompanyEmpWage(CompName, rate, numOfDays, maxHourMonth);
             empWageBuilder.computeEmpWage();
         }
     }
