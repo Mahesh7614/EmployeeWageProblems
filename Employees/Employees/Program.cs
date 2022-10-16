@@ -18,6 +18,7 @@ namespace Employees
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             //Constants
             int IS_FULL_TIME = 1;
 <<<<<<< HEAD
@@ -192,10 +193,19 @@ namespace Employees
             int maxHourMonth = Convert.ToInt32(Console.ReadLine());
             
 >>>>>>> UC11
+=======
+>>>>>>> UC12
             EmpWageBuilderArray empWageBuilder = new EmpWageBuilderArray();
-            empWageBuilder.addcompanyEmpWage(CompName, rate, numOfDays, maxHourMonth);
+            empWageBuilder.addcompanyEmpWage("Airtel",20,25,100);
+            empWageBuilder.addcompanyEmpWage("Tcs",22,26,200);
+            empWageBuilder.addcompanyEmpWage("Mahindra",30,30,110);
+            empWageBuilder.addcompanyEmpWage("Cilpa",15,28,113);
             empWageBuilder.computeEmpWage();
+<<<<<<< HEAD
 >>>>>>> UC10
+=======
+            
+>>>>>>> UC12
         }
     }
 }

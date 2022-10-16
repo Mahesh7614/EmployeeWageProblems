@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 
 namespace Employees
@@ -12,22 +13,25 @@ namespace Employees
 
         private int numOfCompany = 0;
         private CompanyEmpWage[] companyEmpWageArray;
+        private List<CompanyEmpWage> companyEmpWageArrayList;
+        
 
         public EmpWageBuilderArray()
         {
             this.companyEmpWageArray = new CompanyEmpWage[5];
+            companyEmpWageArrayList = new List<CompanyEmpWage>();
         }
         public void addcompanyEmpWage(string company, int empRatePerHour, int numOfWorkingDays, int maxHoursPerMonth)
         {
-            companyEmpWageArray[this.numOfCompany] = new CompanyEmpWage(company, empRatePerHour, numOfWorkingDays, maxHoursPerMonth);
+            companyEmpWageArrayList.Add(new CompanyEmpWage(company, empRatePerHour, numOfWorkingDays, maxHoursPerMonth));
             numOfCompany++;
         }
         public void computeEmpWage()
         {
             for (int i = 0; i < numOfCompany; i++)
             {
-                companyEmpWageArray[i].setTotalEmpWage(this.computeEmpWage(this.companyEmpWageArray[i]));
-                Console.WriteLine(this.companyEmpWageArray[i].toString());
+                companyEmpWageArrayList[i].setTotalEmpWage(this.computeEmpWage(this.companyEmpWageArrayList[i]));
+                Console.WriteLine(this.companyEmpWageArrayList[i].toString());
             }
         }
 
