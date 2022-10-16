@@ -13,6 +13,7 @@
         static void Main(string[] args)
         {
 <<<<<<< HEAD
+<<<<<<< HEAD
             //Constants
             int IS_FULL_TIME = 1;
 <<<<<<< HEAD
@@ -172,6 +173,14 @@
             Cipla.computeEmpWage();
             Console.WriteLine(Cipla.toString());
 >>>>>>> UC9
+=======
+            EmpWageBuilderArray empWageBuilder = new EmpWageBuilderArray();
+            empWageBuilder.addcompanyEmpWage("Airtel", 30, 30, 100);
+            empWageBuilder.addcompanyEmpWage("TCS", 40, 30, 80);
+            empWageBuilder.addcompanyEmpWage("Wipro", 25, 25, 120);
+            empWageBuilder.addcompanyEmpWage("Cipla", 23, 28, 111);
+            empWageBuilder.computeEmpWage();
+>>>>>>> UC10
         }
     }
 }
