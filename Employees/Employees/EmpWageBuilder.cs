@@ -7,31 +7,33 @@ using System.Threading.Tasks;
 
 namespace Employees
 {
-    public class EmpWageBuilderArray
+    public class EmpWageBuilder: IComputeEmpWage
     {
         public const int IS_FULL_TIME = 1, IS_PART_TIME = 2;
 
-        private int numOfCompany = 0;
-        private CompanyEmpWage[] companyEmpWageArray;
-        private List<CompanyEmpWage> companyEmpWageArrayList;
-        
+        //private int numOfCompany = 0;
+        // private CompanyEmpWage[] companyEmpWageArray;
+        //private List<CompanyEmpWage> companyEmpWageArrayList;
+        private LinkedList<CompanyEmpWage> companyEmpWageList;
+        private Dictionary<string, CompanyEmpWage> empWageDictionary;
 
-        public EmpWageBuilderArray()
+        public EmpWageBuilder()
         {
-            this.companyEmpWageArray = new CompanyEmpWage[5];
-            companyEmpWageArrayList = new List<CompanyEmpWage>();
+            this.companyEmpWageList = new LinkedList<CompanyEmpWage>();
+            this.empWageDictionary = new Dictionary<string, CompanyEmpWage>();
         }
         public void addcompanyEmpWage(string company, int empRatePerHour, int numOfWorkingDays, int maxHoursPerMonth)
         {
-            companyEmpWageArrayList.Add(new CompanyEmpWage(company, empRatePerHour, numOfWorkingDays, maxHoursPerMonth));
-            numOfCompany++;
+            CompanyEmpWage companyEmpWage = new CompanyEmpWage(company, empRatePerHour, numOfWorkingDays, maxHoursPerMonth);
+            this.companyEmpWageList.AddLast(companyEmpWage);
+            this.empWageDictionary.Add(company, companyEmpWage);
         }
         public void computeEmpWage()
         {
-            for (int i = 0; i < numOfCompany; i++)
+            foreach (CompanyEmpWage companyEmpWage in this.companyEmpWageList)
             {
-                companyEmpWageArrayList[i].setTotalEmpWage(this.computeEmpWage(this.companyEmpWageArrayList[i]));
-                Console.WriteLine(this.companyEmpWageArrayList[i].toString());
+                companyEmpWage.setTotalEmpWage(this.computeEmpWage(companyEmpWage));
+                Console.WriteLine(companyEmpWage.toString());
             }
         }
 
@@ -64,5 +66,11 @@ namespace Employees
             }
             return totalEmpHrs * companyEmpWage.empRatePerHour;
         }
+
+        public int getTotalWage(string company)
+        {
+            return this.empWageDictionary[company].totalEmpWage;
+        }
+
     }
 }
