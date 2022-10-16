@@ -1,4 +1,7 @@
-﻿namespace Employees
+﻿using System;
+using System.Runtime.CompilerServices;
+
+namespace Employees
 {
     class Program
     {
@@ -12,6 +15,7 @@
         public const int EMP_RATE_PER_HOUR = 20;
         static void Main(string[] args)
         {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
             //Constants
@@ -174,11 +178,22 @@
             Console.WriteLine(Cipla.toString());
 >>>>>>> UC9
 =======
+=======
+            Console.WriteLine("Enter Company Name : ");
+            string CompName = Console.ReadLine();
+
+            Console.WriteLine("Enter Employee Rate Per Hour : ");
+            int rate = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("Enter No of Working Days : ");
+            int numOfDays = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("Enter Maximum Hours Per Month : ");
+            int maxHourMonth = Convert.ToInt32(Console.ReadLine());
+            
+>>>>>>> UC11
             EmpWageBuilderArray empWageBuilder = new EmpWageBuilderArray();
-            empWageBuilder.addcompanyEmpWage("Airtel", 30, 30, 100);
-            empWageBuilder.addcompanyEmpWage("TCS", 40, 30, 80);
-            empWageBuilder.addcompanyEmpWage("Wipro", 25, 25, 120);
-            empWageBuilder.addcompanyEmpWage("Cipla", 23, 28, 111);
+            empWageBuilder.addcompanyEmpWage(CompName, rate, numOfDays, maxHourMonth);
             empWageBuilder.computeEmpWage();
 >>>>>>> UC10
         }

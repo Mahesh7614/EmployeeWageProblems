@@ -12,12 +12,11 @@ namespace Employees
 
         private int numOfCompany = 0;
         private CompanyEmpWage[] companyEmpWageArray;
-       
+
         public EmpWageBuilderArray()
         {
             this.companyEmpWageArray = new CompanyEmpWage[5];
         }
-
         public void addcompanyEmpWage(string company, int empRatePerHour, int numOfWorkingDays, int maxHoursPerMonth)
         {
             companyEmpWageArray[this.numOfCompany] = new CompanyEmpWage(company, empRatePerHour, numOfWorkingDays, maxHoursPerMonth);
