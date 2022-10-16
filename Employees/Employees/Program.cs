@@ -19,6 +19,7 @@ namespace Employees
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             //Constants
             int IS_FULL_TIME = 1;
 <<<<<<< HEAD
@@ -204,6 +205,14 @@ namespace Employees
 <<<<<<< HEAD
 >>>>>>> UC10
 =======
+=======
+            EmpWageBuilder empWage = new EmpWageBuilder();
+            empWage.addcompanyEmpWage("Airtel",20,25,100);
+            empWage.addcompanyEmpWage("Tcs",22,26,200);
+            empWage.addcompanyEmpWage("Mahindra",30,30,110);
+            empWage.addcompanyEmpWage("Cilpa",15,28,113);
+            empWage.computeEmpWage();
+>>>>>>> UC14
             
 >>>>>>> UC12
         }
