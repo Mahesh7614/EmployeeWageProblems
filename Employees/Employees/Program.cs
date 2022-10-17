@@ -15,6 +15,7 @@ namespace Employees
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             //Constants
             int IS_FULL_TIME = 1;
 <<<<<<< HEAD
@@ -182,6 +183,9 @@ namespace Employees
 =======
 >>>>>>> UC13ComputeDailyWageWithTotalWage
             EmpWageBuilderArray empWageBuilder = new EmpWageBuilderArray();
+=======
+            EmpWageBuilder empWageBuilder = new EmpWageBuilder();
+>>>>>>> UC14TotalWageWhenQueriedByCompany
 
             Console.WriteLine("Enter i to Enter Company Details or otherwise enter any key : ");
             var input = Console.ReadLine();
@@ -193,6 +197,7 @@ namespace Employees
                 input = Console.ReadLine();
             }
             empWageBuilder.computeEmpWage();
+<<<<<<< HEAD
 <<<<<<< HEAD
         }
 
@@ -255,6 +260,22 @@ namespace Employees
 =======
 >>>>>>> UC13ComputeDailyWageWithTotalWage
 
+=======
+
+            Console.WriteLine("Enter g to get Company Details : ");
+            var name = Console.ReadLine();
+            while (name == "g")
+            {
+                var detail = empWageBuilder.companyDetailsByName(Console.ReadLine());
+                Console.WriteLine("Comapny Name : " + detail.company);
+                Console.WriteLine("Employee Rate Per Hour : " + detail.empRatePerHour);
+                Console.WriteLine("Number Of Working Days : " + detail.numOfWorkingDays);
+                Console.WriteLine("Maximum Hours Per Month : " + detail.maxHoursPerMonth);
+
+                Console.WriteLine("Enter g to get Company Details : ");
+                name = Console.ReadLine();
+            }
+>>>>>>> UC14TotalWageWhenQueriedByCompany
         }
         public static CompanyEmpWage UserInput()
         {
@@ -272,15 +293,19 @@ namespace Employees
 
             return new CompanyEmpWage(compName, empRatePerHour, numOfDays, maxWorkingHourPerMonth)
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> UC12ComputeTotalEmployeeWageUsingArrayList
 =======
 >>>>>>> UC13ComputeDailyWageWithTotalWage
+=======
+>>>>>>> UC14TotalWageWhenQueriedByCompany
             {
                 company = compName,
                 empRatePerHour = empRatePerHour,
                 numOfWorkingDays = numOfDays,
                 maxHoursPerMonth = maxWorkingHourPerMonth
             };
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -291,6 +316,8 @@ namespace Employees
 >>>>>>> UC12ComputeTotalEmployeeWageUsingArrayList
 =======
 >>>>>>> UC13ComputeDailyWageWithTotalWage
+=======
+>>>>>>> UC14TotalWageWhenQueriedByCompany
         }
     }
 }

@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using System.Security.Cryptography.X509Certificates;
 
 namespace Employees
 {
@@ -11,18 +12,18 @@ namespace Employees
     {
         public const int IS_FULL_TIME = 1, IS_PART_TIME = 2;
 
-        private LinkedList<CompanyEmpWage> companyEmpWageList;
+        public List<CompanyEmpWage> companyEmpWageList;
         private Dictionary<string, CompanyEmpWage> empWageDictionary;
 
         public EmpWageBuilder()
         {
-            this.companyEmpWageList = new LinkedList<CompanyEmpWage>();
+            this.companyEmpWageList = new List<CompanyEmpWage>();
             this.empWageDictionary = new Dictionary<string, CompanyEmpWage>();
         }
         public void addcompanyEmpWage(string company, int empRatePerHour, int numOfWorkingDays, int maxHoursPerMonth)
         {
             CompanyEmpWage companyEmpWage = new CompanyEmpWage(company, empRatePerHour, numOfWorkingDays, maxHoursPerMonth);
-            this.companyEmpWageList.AddLast(companyEmpWage);
+            this.companyEmpWageList.Add(companyEmpWage);
             this.empWageDictionary.Add(company, companyEmpWage);
         }
         public void computeEmpWage()
@@ -32,6 +33,10 @@ namespace Employees
                 companyEmpWage.setTotalEmpWage(this.computeEmpWage(companyEmpWage));
                 Console.WriteLine(companyEmpWage.toString());
             }
+        }
+        public CompanyEmpWage companyDetailsByName(string companyName)
+        {
+            return this.companyEmpWageList.Find(X=>X.company == companyName);
         }
 
         private int computeEmpWage(CompanyEmpWage companyEmpWage)
