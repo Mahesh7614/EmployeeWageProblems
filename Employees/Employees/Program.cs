@@ -5,16 +5,9 @@ namespace Employees
 {
     class Program
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-        public const int IS_FULL_TIME = 1;
-        public const int IS_PART_TIME = 2;
-        public const int EMP_RATE_PER_HOUR = 20;
         static void Main(string[] args)
         {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -183,6 +176,8 @@ namespace Employees
 =======
 =======
 =======
+=======
+>>>>>>> c132c6957fea2f5a406e3e370a7cb3892d6a0199
             EmpWageBuilderArray empWageBuilder = new EmpWageBuilderArray();
 
             Console.WriteLine("Enter i to Enter Company Details or otherwise enter any key : ");
@@ -199,7 +194,10 @@ namespace Employees
 
         public static CompanyEmpWage UserInput()
         {
+<<<<<<< HEAD
 >>>>>>> UC11ComputeEmployeeWageMultipleCompaniesUsingApiApproach
+=======
+>>>>>>> c132c6957fea2f5a406e3e370a7cb3892d6a0199
             Console.WriteLine("Enter Company Name : ");
             string compName = Console.ReadLine();
 
@@ -210,6 +208,7 @@ namespace Employees
             int numOfDays = Convert.ToInt32(Console.ReadLine());
 
             Console.WriteLine("Enter Maximum Hours Per Month : ");
+<<<<<<< HEAD
 <<<<<<< HEAD
             int maxHourMonth = Convert.ToInt32(Console.ReadLine());
             
@@ -236,6 +235,8 @@ namespace Employees
             
 >>>>>>> UC12
 =======
+=======
+>>>>>>> c132c6957fea2f5a406e3e370a7cb3892d6a0199
             int maxWorkingHourPerMonth = Convert.ToInt32(Console.ReadLine());
 
             return new CompanyEmpWage(compName,empRatePerHour,numOfDays,maxWorkingHourPerMonth)
@@ -245,7 +246,10 @@ namespace Employees
                 numOfWorkingDays = numOfDays,
                 maxHoursPerMonth = maxWorkingHourPerMonth
             };
+<<<<<<< HEAD
 >>>>>>> UC11ComputeEmployeeWageMultipleCompaniesUsingApiApproach
+=======
+>>>>>>> c132c6957fea2f5a406e3e370a7cb3892d6a0199
         }
     }
 }
