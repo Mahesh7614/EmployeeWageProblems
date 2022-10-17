@@ -20,6 +20,7 @@ namespace Employees
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             //Constants
             int IS_FULL_TIME = 1;
 <<<<<<< HEAD
@@ -181,16 +182,35 @@ namespace Employees
 >>>>>>> UC9
 =======
 =======
+=======
+            EmpWageBuilderArray empWageBuilder = new EmpWageBuilderArray();
+
+            Console.WriteLine("Enter i to Enter Company Details or otherwise enter any key : ");
+            var input = Console.ReadLine();
+            while (input == "i")
+            {
+                var obj = UserInput();
+                empWageBuilder.addcompanyEmpWage(obj.company, obj.empRatePerHour, obj.numOfWorkingDays, obj.maxHoursPerMonth);
+                Console.WriteLine("Enter i to Enter Company Details or otherwise enter any key :");
+                input = Console.ReadLine();
+            }
+            empWageBuilder.computeEmpWage();
+        }
+
+        public static CompanyEmpWage UserInput()
+        {
+>>>>>>> UC11ComputeEmployeeWageMultipleCompaniesUsingApiApproach
             Console.WriteLine("Enter Company Name : ");
-            string CompName = Console.ReadLine();
+            string compName = Console.ReadLine();
 
             Console.WriteLine("Enter Employee Rate Per Hour : ");
-            int rate = Convert.ToInt32(Console.ReadLine());
+            int empRatePerHour = Convert.ToInt32(Console.ReadLine());
 
             Console.WriteLine("Enter No of Working Days : ");
             int numOfDays = Convert.ToInt32(Console.ReadLine());
 
             Console.WriteLine("Enter Maximum Hours Per Month : ");
+<<<<<<< HEAD
             int maxHourMonth = Convert.ToInt32(Console.ReadLine());
             
 >>>>>>> UC11
@@ -215,6 +235,17 @@ namespace Employees
 >>>>>>> UC14
             
 >>>>>>> UC12
+=======
+            int maxWorkingHourPerMonth = Convert.ToInt32(Console.ReadLine());
+
+            return new CompanyEmpWage(compName,empRatePerHour,numOfDays,maxWorkingHourPerMonth)
+            {
+                company = compName,
+                empRatePerHour = empRatePerHour,
+                numOfWorkingDays = numOfDays,
+                maxHoursPerMonth = maxWorkingHourPerMonth
+            };
+>>>>>>> UC11ComputeEmployeeWageMultipleCompaniesUsingApiApproach
         }
     }
 }
