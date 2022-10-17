@@ -216,11 +216,18 @@ namespace Employees
 =======
 >>>>>>> UC12
             EmpWageBuilderArray empWageBuilder = new EmpWageBuilderArray();
-            empWageBuilder.addcompanyEmpWage("Airtel",20,25,100);
-            empWageBuilder.addcompanyEmpWage("Tcs",22,26,200);
-            empWageBuilder.addcompanyEmpWage("Mahindra",30,30,110);
-            empWageBuilder.addcompanyEmpWage("Cilpa",15,28,113);
+
+            Console.WriteLine("Enter i to Enter Company Details or otherwise enter any key : ");
+            var input = Console.ReadLine();
+            while (input == "i")
+            {
+                var obj = UserInput();
+                empWageBuilder.addcompanyEmpWage(obj.company, obj.empRatePerHour, obj.numOfWorkingDays, obj.maxHoursPerMonth);
+                Console.WriteLine("Enter i to Enter Company Details or otherwise enter any key :");
+                input = Console.ReadLine();
+            }
             empWageBuilder.computeEmpWage();
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> UC10
 =======
@@ -240,6 +247,25 @@ namespace Employees
             int maxWorkingHourPerMonth = Convert.ToInt32(Console.ReadLine());
 
             return new CompanyEmpWage(compName,empRatePerHour,numOfDays,maxWorkingHourPerMonth)
+=======
+
+        }
+        public static CompanyEmpWage UserInput()
+        {
+            Console.WriteLine("Enter Company Name : ");
+            string compName = Console.ReadLine();
+
+            Console.WriteLine("Enter Employee Rate Per Hour : ");
+            int empRatePerHour = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("Enter No of Working Days : ");
+            int numOfDays = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("Enter Maximum Hours Per Month : ");
+            int maxWorkingHourPerMonth = Convert.ToInt32(Console.ReadLine());
+
+            return new CompanyEmpWage(compName, empRatePerHour, numOfDays, maxWorkingHourPerMonth)
+>>>>>>> UC12ComputeTotalEmployeeWageUsingArrayList
             {
                 company = compName,
                 empRatePerHour = empRatePerHour,
@@ -247,9 +273,12 @@ namespace Employees
                 maxHoursPerMonth = maxWorkingHourPerMonth
             };
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> UC11ComputeEmployeeWageMultipleCompaniesUsingApiApproach
 =======
 >>>>>>> c132c6957fea2f5a406e3e370a7cb3892d6a0199
+=======
+>>>>>>> UC12ComputeTotalEmployeeWageUsingArrayList
         }
     }
 }
