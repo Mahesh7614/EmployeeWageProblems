@@ -62,13 +62,13 @@ namespace Employees
                         break;
                 }
                 totalEmpHrs += empHrs;
-<<<<<<< HEAD
+
                 Console.WriteLine("Days : " + totalWorkingDays + " Emp Hrs : " + empHrs);
-=======
+
                 Console.WriteLine("Days : " + totalWorkingDays + "Emp Hrs : " + empHrs);
                 int dailyWage = empHrs * companyEmpWage.empRatePerHour;
                 Console.WriteLine("Daily Wage Of Employee Is : " +dailyWage);
->>>>>>> UC13
+
             }
             return totalEmpHrs * companyEmpWage.empRatePerHour;
         }
