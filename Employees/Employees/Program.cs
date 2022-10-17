@@ -7,21 +7,41 @@ namespace Employees
     {
         static void Main(string[] args)
         {
+            EmpWageBuilderArray empWageBuilder = new EmpWageBuilderArray();
+
+            Console.WriteLine("Enter i to Enter Company Details : ");
+            var input = Console.ReadLine();
+            while (input == "i")
+            {
+                var obj = UserInput();
+                empWageBuilder.addcompanyEmpWage(obj.company, obj.empRatePerHour, obj.numOfWorkingDays, obj.maxHoursPerMonth);
+                Console.WriteLine("Enter i to Enter Company Details :");
+                input = Console.ReadLine();
+            }
+            empWageBuilder.computeEmpWage();
+        }
+
+        public static CompanyEmpWage UserInput()
+        {
             Console.WriteLine("Enter Company Name : ");
-            string CompName = Console.ReadLine();
+            string compName = Console.ReadLine();
 
             Console.WriteLine("Enter Employee Rate Per Hour : ");
-            int rate = Convert.ToInt32(Console.ReadLine());
+            int empRatePerHour = Convert.ToInt32(Console.ReadLine());
 
             Console.WriteLine("Enter No of Working Days : ");
             int numOfDays = Convert.ToInt32(Console.ReadLine());
 
             Console.WriteLine("Enter Maximum Hours Per Month : ");
-            int maxHourMonth = Convert.ToInt32(Console.ReadLine());
-            
-            EmpWageBuilderArray empWageBuilder = new EmpWageBuilderArray();
-            empWageBuilder.addcompanyEmpWage(CompName, rate, numOfDays, maxHourMonth);
-            empWageBuilder.computeEmpWage();
+            int maxWorkingHourPerMonth = Convert.ToInt32(Console.ReadLine());
+
+            return new CompanyEmpWage(compName,empRatePerHour,numOfDays,maxWorkingHourPerMonth)
+            {
+                company = compName,
+                empRatePerHour = empRatePerHour,
+                numOfWorkingDays = numOfDays,
+                maxHoursPerMonth = maxWorkingHourPerMonth
+            };
         }
     }
 }
