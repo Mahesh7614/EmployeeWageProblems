@@ -14,6 +14,7 @@ namespace Employees
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             //Constants
             int IS_FULL_TIME = 1;
 <<<<<<< HEAD
@@ -178,6 +179,8 @@ namespace Employees
 =======
 =======
 >>>>>>> c132c6957fea2f5a406e3e370a7cb3892d6a0199
+=======
+>>>>>>> UC13ComputeDailyWageWithTotalWage
             EmpWageBuilderArray empWageBuilder = new EmpWageBuilderArray();
 
             Console.WriteLine("Enter i to Enter Company Details or otherwise enter any key : ");
@@ -190,6 +193,7 @@ namespace Employees
                 input = Console.ReadLine();
             }
             empWageBuilder.computeEmpWage();
+<<<<<<< HEAD
         }
 
         public static CompanyEmpWage UserInput()
@@ -248,6 +252,8 @@ namespace Employees
 
             return new CompanyEmpWage(compName,empRatePerHour,numOfDays,maxWorkingHourPerMonth)
 =======
+=======
+>>>>>>> UC13ComputeDailyWageWithTotalWage
 
         }
         public static CompanyEmpWage UserInput()
@@ -265,7 +271,10 @@ namespace Employees
             int maxWorkingHourPerMonth = Convert.ToInt32(Console.ReadLine());
 
             return new CompanyEmpWage(compName, empRatePerHour, numOfDays, maxWorkingHourPerMonth)
+<<<<<<< HEAD
 >>>>>>> UC12ComputeTotalEmployeeWageUsingArrayList
+=======
+>>>>>>> UC13ComputeDailyWageWithTotalWage
             {
                 company = compName,
                 empRatePerHour = empRatePerHour,
@@ -274,11 +283,14 @@ namespace Employees
             };
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> UC11ComputeEmployeeWageMultipleCompaniesUsingApiApproach
 =======
 >>>>>>> c132c6957fea2f5a406e3e370a7cb3892d6a0199
 =======
 >>>>>>> UC12ComputeTotalEmployeeWageUsingArrayList
+=======
+>>>>>>> UC13ComputeDailyWageWithTotalWage
         }
     }
 }
